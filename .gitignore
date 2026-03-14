@@ -1,0 +1,65 @@
+# App files
+**/shared_files*/
+
+# Python bytecode
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+*.log
+logs/
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# mypy / type checking
+.mypy_cache/
+
+# Ruff / lint caches
+.ruff_cache/
+
+# Pyre
+.pyre/
+
+# Temporary files
+*.tmp
+*.swp
