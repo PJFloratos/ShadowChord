@@ -1,6 +1,6 @@
 # ShadowChord: Global P2P DHT & File Streamer
 
-ShadowChord is a fully decentralized, mathematically rigorous Peer-to-Peer (P2P) network built entirely from scratch in Python. It implements a modified version of the **Chord Distributed Hash Table (DHT)** protocol, capable of O(\log N) routing, self-healing topology management, fault-tolerant data replication, and BitTorrent-style out-of-band file streaming.
+ShadowChord is a fully decentralized, mathematically rigorous Peer-to-Peer (P2P) network built entirely from scratch in Python. It implements a modified version of the **Chord Distributed Hash Table (DHT)** protocol, capable of O(log N) routing, self-healing topology management, fault-tolerant data replication, and BitTorrent-style out-of-band file streaming.
 
 This project was built to explore the physical and adversarial limits of the internet, successfully bridging local VMs, Host machines, and 5G Mobile Networks behind Carrier-Grade NATs via a Tailscale SD-WAN overlay.
 
