@@ -5,6 +5,10 @@ import platform
 import sys
 import json
 
+"""
+sudo ufw allow 5000/tcp
+"""
+
 
 def detect_environment():
     """
