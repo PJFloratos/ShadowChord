@@ -5,11 +5,22 @@ import platform
 import sys
 import json
 
+
 def detect_environment():
-    """Determines if we should act as a Pillar (Supernode) or a Guest (Light Client)."""
+    """
+    """
     if 'android' in platform.release().lower() or 'TERMUX_VERSION' in os.environ:
         return "LIGHT_CLIENT"
+    try:
+        with open('/sys/class/dmi/id/product_name', 'r') as f:
+            hardware = f.read().strip().lower()
+            vm_sigs = ['standard pc', 'qemu', 'virtualbox', 'vmware', 'amazon ec2']
+            if any(sig in hardware for sig in vm_sigs):
+                return "SUPERNODE"
+    except (FileNotFoundError, PermissionError):
+        pass
     return "SUPERNODE"
+
 
 class ShadowNode:
     def __init__(self, role, target_ip=None, target_port=5000):
@@ -54,6 +65,7 @@ class ShadowNode:
         except Exception as e:
             print(f"[!] Connectivity Failed: {e}")
             print("[!] Ensure the Supernode's Port 5000 is open/forwarded!")
+
 
 if __name__ == "__main__":
     env = detect_environment()
